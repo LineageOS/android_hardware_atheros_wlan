@@ -1,0 +1,9 @@
+Change-Id: I458f6bcce631f62dccf5809dac94160b7c5d1d2b
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: R. Andrew Ohana <andrew.ohana@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Wed, 15 Aug 2012 00:53:52 +0400
+Reviewed-on: http://review.cyanogenmod.com/20845
+Project: CyanogenMod/android_hardware_atheros_wlan
+Branch: refs/heads/jellybean

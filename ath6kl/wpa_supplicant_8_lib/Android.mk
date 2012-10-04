@@ -50,6 +50,10 @@ ifdef CONFIG_ANDROID_LOG
 L_CFLAGS += -DCONFIG_ANDROID_LOG
 endif
 
+ifeq ($(BOARD_HAVE_SAMSUNG_WIFI),true)
+L_CFLAGS += -DSAMSUNG_WIFI
+endif
+
 ########################
 
 include $(CLEAR_VARS)

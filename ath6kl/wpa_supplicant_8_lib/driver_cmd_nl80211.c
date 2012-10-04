@@ -246,6 +246,10 @@ int wpa_driver_nl80211_driver_cmd(void *priv, char *cmd, char *buf,
 		} else {
 			wpa_driver_send_hang_msg(drv);
 		}
+#ifndef SAMSUNG_WIFI
+	/* Samsung has added these commands to the
+	 * kernel driver, so don't ignore them here
+	 */
 	} else if(os_strcmp(cmd, "SCAN-ACTIVE") == 0) {
 		return 0; /* unsupported function */
 	} else if(os_strcmp(cmd, "SCAN-PASSIVE") == 0) {
@@ -281,6 +285,7 @@ int wpa_driver_nl80211_driver_cmd(void *priv, char *cmd, char *buf,
 	} else if(os_strcmp(cmd, "RXFILTER-STOP") == 0) {
 		// STUB
 		return 0;
+#endif
 	} else { /* Use private command */
 		if (os_strcasecmp(cmd, "BGSCAN-START") == 0) {
 			ret = wpa_driver_set_backgroundscan_params(priv);

@@ -17,6 +17,9 @@
 #include "android_drv.h"
 #endif
 
+#ifndef os_strncpy
+#define os_strncpy(d, s, n) strncpy((d), (s), (n))
+#endif
 
 #define MAX_WPSP2PIE_CMD_SIZE		512
 
